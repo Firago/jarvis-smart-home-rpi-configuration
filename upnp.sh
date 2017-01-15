@@ -17,7 +17,7 @@ do
 done
 
 if [ $? -eq $WGET_SUCCESS_CODE ]; then
-    wget -q https://www.duckdns.org/update/jsh-hub1/cc8cc1f9-bac1-4144-9a60-5aba19417328
+    wget -q https://www.duckdns.org/update/jsh-hub1/cc8cc1f9-bac1-4144-9a60-5aba19417328 > /dev/null
     upnpc -e 'SSH on Raspberry Pi' -r 22 TCP > /dev/null
-    upnpc -e 'HTTP Raspberry Pi' -r 8080 TCP > /dev/null
+    upnpc -e 'HTTP Raspberry Pi' -r 80 TCP > /dev/null
 fi
